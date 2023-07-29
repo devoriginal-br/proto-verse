@@ -1,0 +1,8 @@
+{
+  "name": "proto-verse",
+  "version": "0.0.1",
+  "description": "ProtoVerse is an open-source project that empowers frontend developers to create a custom API from a JSON file, enabling them to work on their projects without the need for a fully functional backend.",
+  "repository": "git@github.com:devoriginal-br/proto-verse.git",
+  "author": "DevOriginal <contato@devoriginal.com>",
+  "license": "SEE LICENSE IN LICENSE"
+}

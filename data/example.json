@@ -1,0 +1,31 @@
+{
+  "about": {
+    "method": "GET",
+    "response": {
+      "code": 200,
+      "body": {
+        "name": "ProtoVerse",
+        "version": "1.0.0",
+        "author": "DevOriginal"
+      }
+    }
+  },
+  "submit": {
+    "method": "POST",
+    "response": {
+      "code": 201,
+      "body": {
+        "message": "Registration successful"
+      }
+    }
+  },
+  ":id/details": {
+    "method": "GET",
+    "response": {
+      "code": 400,
+      "body": {
+        "message": "Invalid token"
+      }
+    }
+  }
+}

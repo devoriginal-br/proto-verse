@@ -1,11 +1,14 @@
 import dotenv from 'dotenv';
 import fastify from 'fastify';
+import cors from '@fastify/cors';
 import { getMockFiles } from './helpers/getMockFiles';
 import { Mock, MockRequestType } from './mock.interface';
 
 dotenv.config();
 
 const port: number = Number(process.env.PORT || 3000);
+const corsOrigin: string = process.env.CORS_ORIGIN || '*';
+const corsCredentials: boolean = process.env.CORS_CREDENTIALS === 'true';
 
 const serverAddress = `http://localhost:${port}`;
 
@@ -18,6 +21,11 @@ if (mocks.length === 0) {
 }
 
 const app = fastify();
+
+app.register(cors, {
+  origin: corsOrigin,
+  credentials: corsCredentials,
+});
 
 mocks.forEach((mock) => {
   const basePath = mock.replace(/\.json$/, '');
